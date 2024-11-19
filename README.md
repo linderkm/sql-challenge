@@ -2,13 +2,15 @@
 
 ---------------------------------
 # Sections
-- All files for this challenge are included in the employeeSQL folder.
+- All files for this challenge are included in the EmployeeSQL folder.
 
 - An entity relationship diagram ('ERD.png') is included to satisfy the Data Modeling (10pts) requirement. 'QuickDBD-exports.sql' is also included in the folder, as an ERD schema file exported from http://www.quickdatabasediagrams.com (used to generate ERD). 
 
 - 'schema.sql' included to satisfy Data Engineering (70pts) requirement.
 
 - 'analysis.sql' included to satisfy Data Analysis (20pts) requirement.
+
+- All .csv files, used to populate tables, are included in the 'resources' folder.
 
 ---------------------------------
 # References (all reference numbers correspond to reference numbers commented in included files.
