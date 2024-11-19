@@ -2,6 +2,7 @@
 
 ---------------------------------
 # Sections
+- All files for this challenge are included in the employeeSQL folder.
 
 - An entity relationship diagram ('ERD.png') is included to satisfy the Data Modeling (10pts) requirement. 'QuickDBD-exports.sql' is also included in the folder, as an ERD schema file exported from http://www.quickdatabasediagrams.com (used to generate ERD). 
 
