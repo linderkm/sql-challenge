@@ -37,6 +37,7 @@ WHERE first_name = 'Hercules' AND last_name LIKE 'B__%';
 
 
 --6. List each employee in the Sales department, including their employee number, last name, and first name
+-- Module 9; Lesson 2; Activity 10; revisit_subqueries_solution.sql
 SELECT emp_no, last_name, first_name
 FROM employees
 Where emp_no IN
@@ -50,6 +51,46 @@ Where emp_no IN
 		WHERE dept_name = 'Sales'
 		)
 	);
+
+
+-- 7. List each employee in the Sales and Development departments, including:
+--their employee number, last name, first name, and department name
+--https://www.postgresql.org/docs/current/queries-union.html
+SELECT emp_no, last_name, first_name
+FROM employees
+Where emp_no IN
+	(
+	SELECT emp_no
+	FROM dept_emp
+	WHERE dept_no IN
+		(
+		SELECT dept_no
+		FROM departments
+		WHERE dept_name = 'Sales'
+		)
+	)
+UNION
+SELECT emp_no, last_name, first_name
+FROM employees
+Where emp_no IN
+	(
+	SELECT emp_no
+	FROM dept_emp
+	WHERE dept_no IN
+		(
+		SELECT dept_no
+		FROM departments
+		WHERE dept_name = 'Development'
+		)
+	);
+
+
+-- 8. List the frequency counts, in descending order:
+-- all the employee last names (that is, how many employees share each last name)
+SELECT last_name, COUNT(last_name) as name_count
+FROM employees
+GROUP BY last_name
+ORDER BY name_count desc;
 
 
 
