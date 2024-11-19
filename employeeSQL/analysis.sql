@@ -86,7 +86,8 @@ Where emp_no IN
 
 
 -- 8. List the frequency counts, in descending order:
--- all the employee last names (that is, how many employees share each last name)
+-- all the employee last names (that is, how many employees share each last name).
+-- Module 9; Lesson 2; Activity 2; aggregates_solution.sql
 SELECT last_name, COUNT(last_name) as name_count
 FROM employees
 GROUP BY last_name
