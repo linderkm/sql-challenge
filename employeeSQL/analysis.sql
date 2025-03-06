@@ -9,7 +9,7 @@ JOIN salaries ON salaries.emp_no=employees.emp_no;
 -- (3)
 SELECT first_name, last_name, hire_date
 FROM employees
-WHERE hire_date LIKE '__/__/1986%';
+WHERE hire_date BETWEEN '1986-01-01 AND '1986-12-31';
 
 
 -- 3. List the manager of each department along with:
@@ -60,16 +60,16 @@ Where emp_no IN
 -- (5)
 SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
 FROM employees e
-LEFT JOIN dept_emp de ON e.emp_no = De.emp_no
-LEFT JOIN departments d ON dE.dept_no = d.dept_no
+LEFT JOIN dept_emp de ON e.emp_no = de.emp_no
+LEFT JOIN departments d ON de.dept_no = d.dept_no
 Where d.dept_name = 'Sales'
 
 UNION
 
 SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
 FROM employees e
-LEFT JOIN dept_emp de ON e.emp_no = De.emp_no
-LEFT JOIN departments d ON dE.dept_no = d.dept_no
+LEFT JOIN dept_emp de ON e.emp_no = de.emp_no
+LEFT JOIN departments d ON de.dept_no = d.dept_no
 Where d.dept_name = 'Development'
 
 
